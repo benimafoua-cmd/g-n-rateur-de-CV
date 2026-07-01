@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Générateur de CV Moderne</title>
+    <link rel="stylesheet" href="projet2.css">
+    <script src="https://cloudflare.com"></script>
+</head>
+<body>
+
+    <div class="container">
+        <!-- FORMULAIRE (Sera totalement exclu du PDF) -->
+        <div class="form-section">
+            <h2>Informations</h2>
+            <div class="form-group"><label>Photo</label><input type="file" id="input-photo" accept="image/*"></div>
+            <div class="form-group"><label>Nom Complet</label><input type="text" id="input-name" placeholder="Jean Dupont"></div>
+            <div class="form-group"><label>Métier</label><input type="text" id="input-title" placeholder="Développeur Web"></div>
+            <div class="form-group"><label>Email</label><input type="email" id="input-email" placeholder="jean@email.com"></div>
+            <div class="form-group"><label>Téléphone</label><input type="tel" id="input-phone" placeholder="06 000 00 00"></div>
+
+            <h2>Compétences</h2>
+            <div id="skills-container"></div>
+            <button type="button" class="btn-add" id="btn-add-skill">+ Ajouter</button>
+
+            <h2>Expériences</h2>
+            <div id="experience-container"></div>
+            <button type="button" class="btn-add" id="btn-add-experience">+ Ajouter</button>
+
+             <button class="btn-download" id="btn-dowload-pdf: auto;" onclick="window.print()">Télécharger le CV en PDF</button>
+    </div>
+
+        <!-- SEULE CETTE PARTIE SORTIRA DANS LE PDF -->
+        <div class="preview-section">
+            <div id="cv-template">
+                <div class="cv-top-banner">
+                    <div class="cv-photo-container">
+                        <img id="cv-photo" src="" alt="Photo">
+                    </div>
+                    <div class="cv-header-text">
+                        <h1 id="cv-name">NOM PRÉNOM</h1>
+                        <div class="title" id="cv-job-title">MÉTIER</div>
+                        <hr class="header-line">
+                    </div>
+                </div>
+
+                <div class="cv-body">
+                    <div class="cv-left-col">
+                        <h3 class="section-title-left">PROFIL</h3>
+                        <div class="cv-contact-info">
+                            <p><strong>E-MAIL :</strong><br><span id="cv-email">exemple@gmail.com</span></p>
+                            <p><strong>TÉLÉPHONE :</strong><br><span id="cv-phone">06 00 00 00 00</span></p>
+                        </div>
+
+                        <h3 class="section-title-left">COMPÉTENCES</h3>
+                        <ul class="cv-skills-list" id="cv-skills"></ul>
+                    </div>
+
+                    <div class="cv-right-col">
+                        <h3 class="section-title-right">EXPÉRIENCES PROFESSIONNELLES</h3>
+                        <div id="cv-experiences"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="projet2.js"></script>
+</body>
+</html>
