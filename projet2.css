@@ -23,7 +23,8 @@ body {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 30px;
-    width: 1300px;
+    max-width: 1200px;
+    width: 100%;
 }
 
 /* --- Section Formulaire --- */
