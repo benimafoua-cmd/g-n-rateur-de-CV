@@ -25,6 +25,21 @@
         width: 100% !important;
     }
 }
+/* AJOUTEZ CE BLOC CI-DESSOUS POUR LE PDF */
+    @media print {
+        body {
+            width: auto !important;
+            display: block !important;
+        }
+        #cv-template {
+            width: 210mm !important; /* Force la vraie largeur d'une feuille A4 */
+            transform: scale(1) !important; /* Annule le zoom miniature */
+            position: absolute !important;
+            top: 0 !important;
+            left: 0 !important;
+        }
+    }
+        
 </style>
 </head>
 <body>
