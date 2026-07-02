@@ -21,10 +21,11 @@ body {
 
 .container {
     display: grid;
-    grid-template-columns: 635PX 635PX; /* deux colonnes fixes de 635PX */
+    grid-template-columns: 1fr 1fr;
     gap: 30px;
     width: 1300px;
-    margin: 0 auto; /* centre le tout sur l'écran */
+    max-width: 100%;
+    margin: 0 auto; 
 }
 
 /* --- Section Formulaire --- */
@@ -35,8 +36,6 @@ body {
     box-shadow: 0 4px 6px rgba(0,0,0,0);
     max-height: 95vh;
     overflow-y: auto;
-    width: 100%; /* elle occupera exactement les 635px alloué par la grille */ 
-    box-sizing: border-box; /* évite que le padding élargisse le bloc */
 }
 
 h2 {
@@ -195,5 +194,18 @@ button {
         top: 0;
         left: 0;
         transform: scale(1);
+    }
+}
+@media (max-width: 768px) {
+    body {
+        width: 1300px !important;
+    }
+    .container {
+        grid-template-columns: 630px 630px !important;
+        width: 1300px !important;
+    }
+    .form-section, .preview-section {
+        max-height: none !important;
+        overflow: visible !important;
     }
 }
