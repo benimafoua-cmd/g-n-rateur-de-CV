@@ -21,11 +21,11 @@ body {
 
 .container {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr; /* On remet les colonnes fluides */
     gap: 30px;
-    width: 1300px;
-    max-width: 100%;
-    margin: 0 auto; 
+    max-width: 1300px;              /* On remet le max-width */
+    width: 100%;                    /* On remet le 100% */
+    margin: 0 auto;
 }
 
 /* --- Section Formulaire --- */
@@ -36,6 +36,7 @@ body {
     box-shadow: 0 4px 6px rgba(0,0,0,0);
     max-height: 95vh;
     overflow-y: auto;
+    /* Supprimez toute ligne "width: 635px" si elle y est encore */
 }
 
 h2 {
@@ -194,18 +195,5 @@ button {
         top: 0;
         left: 0;
         transform: scale(1);
-    }
-}
-@media (max-width: 768px) {
-    body {
-        width: 1300px !important;
-    }
-    .container {
-        grid-template-columns: 630px 630px !important;
-        width: 1300px !important;
-    }
-    .form-section, .preview-section {
-        max-height: none !important;
-        overflow: visible !important;
     }
 }
