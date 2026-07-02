@@ -21,10 +21,10 @@ body {
 
 .container {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 635PX 635PX; /* deux colonnes fixes de 635PX */
     gap: 30px;
-    max-width: 1200px;
-    width: 100%;
+    width: 1300px;
+    margin: 0 auto; /* centre le tout sur l'écran */
 }
 
 /* --- Section Formulaire --- */
@@ -35,6 +35,8 @@ body {
     box-shadow: 0 4px 6px rgba(0,0,0,0);
     max-height: 95vh;
     overflow-y: auto;
+    width: 100%; /* elle occupera exactement les 635px alloué par la grille */ 
+    box-sizing: border-box; /* évite que le padding élargisse le bloc */
 }
 
 h2 {
@@ -87,6 +89,8 @@ button {
     position: sticky;
     top: 20px;
     height: max-content;
+    width: 100%;            /* Ajoute cette ligne */
+    box-sizing: border-box; /* Ajoute cette ligne */
 }
 
 #cv-template {
